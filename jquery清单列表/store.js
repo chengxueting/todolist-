@@ -20,12 +20,12 @@ add_task.on('submit',function(e){
   function add(new_task) {
     task_list.push(new_task); 
     store.set('task_value',task_list);
+    task_list=store.get('task_value')
     render_task();
     return true;
   }
 
 function init(){
-    task_list=store.get('task_value')
     if(task_list.length){
         render_task();
     }
