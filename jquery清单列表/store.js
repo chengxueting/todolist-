@@ -26,7 +26,7 @@ add_task.on('submit',function(e){
 
 function init(){
     task_list=store.get('task_value')
-    if(task_list.length=0){
+    if(task_list.length===0){
       return;
     }else{
       render_task();
